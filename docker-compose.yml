@@ -1,0 +1,48 @@
+version: '3.1'
+
+services:
+  node1:
+    image: simple_kvserver_node
+    build:
+      context: node
+    volumes:
+      - ./node/src:/kvnode
+      - ./database/node1:/database
+    environment:
+      - NUMNODES=4
+      - NODENAME=node1
+    ports:
+      - 7776:7776
+
+  node2:
+    image: simple_kvserver_node
+    build:
+      context: node
+    volumes:
+      - ./node/src:/kvnode
+      - ./database/node2:/database
+    environment:
+      - NUMNODES=4
+      - NODENAME=node2
+
+  node3:
+    image: simple_kvserver_node
+    build:
+      context: node
+    volumes:
+      - ./node/src:/kvnode
+      - ./database/node3:/database
+    environment:
+      - NUMNODES=4
+      - NODENAME=node3
+
+  node4:
+    image: simple_kvserver_node
+    build:
+      context: node
+    volumes:
+      - ./node/src:/kvnode
+      - ./database/node4:/database
+    environment:
+      - NUMNODES=4
+      - NODENAME=node4
