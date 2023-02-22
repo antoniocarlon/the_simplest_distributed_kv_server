@@ -5,8 +5,8 @@ This is an example of a very simple (less than 50 lines of code) distributed KV 
 ## Quickstart
 
 ### Requirements
- - Docker
- - Docker compose
+ - Docker
+ - Docker compose
 
 ### Setup
 ```
